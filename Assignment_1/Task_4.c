@@ -34,12 +34,42 @@ void DisplayFileStatistics(char fileName[50])
     {
         printf("File Size is: %ld\n",sobj.st_size);
         printf("inode number of File is: %ld\n",sobj.st_ino);
-        printf("Permissions / File Type: %d\n",sobj.st_mode);
+        
+        if(S_ISBLK(sobj.st_mode))
+        {
+            printf("File Type / Mode: Block Device\n");
+        }
+        else if(S_ISCHR(sobj.st_mode))
+        {
+            printf("File Type / Mode: Character Device\n");
+        }
+        else if(S_ISDIR(sobj.st_mode))
+        {
+            printf("File Type / Mode: Directory File\n");
+        }
+        else if(S_ISREG(sobj.st_mode))
+        {
+            printf("File Type / Mode: Regular FIle\n");
+        }
+        else if(S_ISSOCK(sobj.st_mode))
+        {
+            printf("File Type / Mode: Socket File\n");
+        }
+        else if(S_ISFIFO(sobj.st_mode))
+        {
+            printf("File Type / Mode: Pipe File\n");
+        }
+        else if(S_ISLNK(sobj.st_mode))
+        {
+            printf("File Type / Mode: Symbolic Link\n");
+        }
+        
         printf("Number of Hard Links: %ld\n",sobj.st_nlink);
         printf("User ID of Owner: %d\n",sobj.st_uid);
         printf("Group ID of Owner: %d\n",sobj.st_gid);
-        printf("Time of Last Access: %ld\n",sobj.st_atim.tv_nsec);
-        printf("Time of Last Modification: %ld\n",sobj.st_mtim.tv_nsec);
+        printf("Last status change: %s\n", ctime(&sobj.st_ctime));
+        printf("Last file access: %s\n", ctime(&sobj.st_atime));
+
     }
     else 
     {
