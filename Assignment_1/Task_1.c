@@ -21,7 +21,7 @@
 //  Function Name: openGivenFile
 //  Parameter: Name of File Which need to open
 //  Data Type of Parameter: char 
-//  Return Value Data Type: int
+//  Return Value : File Descriptor (fd) of opened file 
 //
 /////////////////////////////////////////
 int openGivenFile(char fileName[50]) 

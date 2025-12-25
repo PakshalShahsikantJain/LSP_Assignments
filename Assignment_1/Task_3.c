@@ -25,7 +25,7 @@ typedef int BOOL;
 //  Function Name: checkFileAccessPermissions
 //  Parameters: fileName,mode (char,int)
 //  Description: Checks File Access Permission if Accessible or not in give mode
-//  Return Value : BOOLEAN
+//  Return Value : TRUE on Success else FALSE
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 BOOL checkFileAccessPermissions(char fileName[50],int mode)
@@ -49,7 +49,7 @@ BOOL checkFileAccessPermissions(char fileName[50],int mode)
 //  Function Name: strcmpx
 //  Parameters: str1,str2 (char *,char *)
 //  Description: Compares Two Strings if equal or not
-//  Return Value : BOOLEAN
+//  Return Value : TRUE on Success else FALSE
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 BOOL strcmpx(char *str1,char *str2)

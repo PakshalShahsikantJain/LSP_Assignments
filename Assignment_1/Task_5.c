@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-//  Name: Pakshal Shashikant Jain
+//  Author: Pakshal Shashikant Jain
 //  Date: 21/12/2025
 //  Program: Read N Bytes From File
 //              •Accept File name and number of bytes N.
@@ -29,7 +29,7 @@ void readDataFromFile(char fileName[50],int no)
     int iRet = 0;
     char *arr = NULL;
 
-    arr = (char *)malloc(no * sizeof(int));
+    arr = (char *)malloc(no * sizeof(char));
 
     fd = open(fileName,O_RDONLY);   //system call to open file in Read Mode Only.
 

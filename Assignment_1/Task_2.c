@@ -23,7 +23,7 @@
 //  Parameter1: Name of File Which need to open
 //  Parameter2: Mode In Which File Needs to Open
 //  Data Type of Parameters: char, int 
-//  Return Value Data Type: int
+//  Return Value Data Type: fd (File Descriptor) of opened file
 //
 /////////////////////////////////////////
 int openGivenFileInGivenMode(char fileName[50],int mode) 
