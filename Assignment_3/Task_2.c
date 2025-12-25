@@ -123,7 +123,7 @@ int main()
 
     if(bret == TRUE)
     {   
-        if(realpath(brr,absolutePath) != NULL)
+        if(realpath(arr,absolutePath) != NULL)
         {
             printf("%s File is Present in Directory %s\n",brr,absolutePath);
         }
